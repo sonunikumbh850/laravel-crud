@@ -36,49 +36,53 @@
     </nav>
 
     <!-- Form to add products -->
-    <div class="container m-5">
-        <div class="d-flex justify-content-end">
-            <a class="btn btn-primary" href="/create" role="button">Add Product</a>
-        </div>
-        <div class="container mt-5">
-            <div class="card">
-                <div class="card-header bg-primary text-white">
-                    Product List
-                </div>
-                <div class="card-body p-0">
-                    <table class="table table-striped table-hover mb-0">
-                        <thead class="table-dark">
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Product Name</th>
-                                <th scope="col">Description</th>
-                                <th scope="col">Image</th>
-                                <th scope="col">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($products as $product)
+    <div class="d-flex justify-content-center mt-5">
+        <div class="container m-5" style="max-width: 1200px;">
+            <div class="d-flex justify-content-end">
+                <a class="btn btn-primary" href="/create" role="button">Add Product</a>
+            </div>
+            <div class="container mt-5">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        Product List
+                    </div>
+                    <div class="card-body p-0">
+                        <table class="table table-striped table-hover mb-0 text-center">
+                            <thead class="table-dark">
                                 <tr>
-                                    <th scope="row">{{ $loop->iteration }}</th>
-                                    <td>{{ $product->name }}</td>
-                                   <td style="width: 25%;">{{ $product->description }}</td>
-                                    <td>
-                                        <img src="/images/{{ $product->images }}" class="rounded-circle" width="50"
-                                            height="50" alt="Image">
-                                    </td>
-                                    <td> <a class="btn btn-secondary" href="{{ $product->id }}/edit" role="button">Edit</a>
-                                    </td>
-                                    <td><a class="btn btn-danger" href="{{ $product->id }}/delete" role="button">Delete</a>
-                                    </td>
+                                    <th>#</th>
+                                    <th>Product Name</th>
+                                    <th>Description</th>
+                                    <th>Image</th>
+                                    <th colspan="2">Action</th>
                                 </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                @foreach ($products as $product)
+                                    <tr>
+                                        <th>{{ $loop->iteration }}</th>
+                                        <td>{{ $product->name }}</td>
+                                        <td style="width: 25%;">{{ $product->description }}</td>
+                                        <td>
+                                            <img src="/images/{{ $product->images }}" class="rounded-circle" width="50"
+                                                height="50">
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-secondary" href="{{ $product->id }}/edit">Edit</a>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-danger" href="{{ $product->id }}/delete">Delete</a>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
-
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
