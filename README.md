@@ -1,4 +1,4 @@
-README — Laravel CRUD + Login (Tailwind + MySQL)
+README — Laravel CRUD + Login (MySQL)
 
 Short change description:
 Added full Post CRUD (create / read / update / delete) protected by authentication, plus user login / registration using Laravel Breeze (Blade + Tailwind). Includes database migrations, a User seeder for quick login, Tailwind + Vite setup, and authorization checks so only post authors can edit/delete their posts.
