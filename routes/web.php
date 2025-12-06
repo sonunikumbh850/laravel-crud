@@ -9,3 +9,6 @@ Route::post('/store', [ProductController::class, 'store'])->name('Products.store
 Route::get('/{id}/edit', [ProductController::class, 'edit']);
 Route::put('/{id}/update', [ProductController::class, 'update'])->name('Products.update');
 Route::get('/{id}/delete', [ProductController::class, 'delete'])->name('Products.delete');
+
+// Authentication routes
+Route::get('/auth/login', [ProductController::class, 'login'])->name('auth.login');

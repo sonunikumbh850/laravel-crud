@@ -81,4 +81,12 @@ class ProductController extends Controller
         $product->delete();
         return back()->with('success', 'Product deleted successfully!');
     }
+
+
+    // Authentication methods can be added here
+
+    public function login()
+    {
+        return view('auth.default');
+    }
 }
