@@ -28,7 +28,7 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto"> <!-- Push items to the right -->
                     <a class="nav-link active" aria-current="page" href="/auth/login">Login</a>
-                    <a class="nav-link" href="/register">Register</a>
+                    <a class="nav-link" href="/auth/register">Register</a>
                 </div>
             </div>
 

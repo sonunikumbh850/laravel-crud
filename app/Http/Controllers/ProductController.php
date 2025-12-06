@@ -87,6 +87,10 @@ class ProductController extends Controller
 
     public function login()
     {
-        return view('auth.default');
+        return view('auth.login');
+    }
+
+    public function register(Request $request){
+        return view('auth.registration');
     }
 }

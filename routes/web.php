@@ -11,4 +11,5 @@ Route::put('/{id}/update', [ProductController::class, 'update'])->name('Products
 Route::get('/{id}/delete', [ProductController::class, 'delete'])->name('Products.delete');
 
 // Authentication routes
-Route::get('/auth/login', [ProductController::class, 'login'])->name('auth.login');
+Route::get('/auth/login', [ProductController::class, 'login']);
+Route::get('/auth/register',[ProductController::class, 'register']);
